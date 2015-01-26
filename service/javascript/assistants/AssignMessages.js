@@ -182,7 +182,7 @@ AssignMessages.prototype.processMessageAndAddress = function (msg, address) {
 
 	future.then(function msgMergeCB() {
 		var result = checkResult(future);
-		console.log("Message stored: ", result);
+		Log.debug("Message stored: ", result);
 		if (result.returnValue) {
 			if (result.results[0].rev > newRev) {
 				newRev = result.results[0].rev;
